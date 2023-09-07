@@ -6,7 +6,10 @@ import Glasses from "../../img/glasses.png";
 import Humble from "../../img/humble.png";
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
-import Resume from './resume.pdf';
+import { Document,Page,pdfjs } from "react-pdf";
+import Resume from '../Services/Muhammad.pdf';
+import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 const Services = () => {
   // context
@@ -26,13 +29,13 @@ const Services = () => {
         {/* dark mode */}
         <span style={{ color: darkMode ? "white" : "" }}>My Awesome</span>
         <span>services</span>
-        <spane>
+        <span>
         Transforming ideas into stunning, functional websites that leave 
           <br />
           a lasting impression.
-        </spane>
-        <a href={Resume} download>
-          <button className="button s-button">Download CV</button>
+        </span>
+        <a href={Resume} download="resume.pdf">
+          <button className="button s-button" href={Resume}>Download CV</button>
         </a>
         <div className="blur s-blur1" style={{ background: "#ABF1FF94" }}></div>
       </div>
