@@ -2,6 +2,9 @@ import React, { useContext, useRef, useState } from "react";
 import "./Contact.css";
 import emailjs from "@emailjs/browser";
 import { themeContext } from "../../Context";
+import { ToastContainer,toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Contact = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
@@ -12,16 +15,17 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_2mu5xtl",
-        "template_m5udu2c",
+        "service_s2sfsor",
+        "template_asc2ivr",
         form.current,
-        "VLwg1ltOWvnCYAiK_"
+        "oIiiLQoR25RPMmSQj"
       )
       .then(
         (result) => {
           console.log(result.text);
           setDone(true);
-          form.reset();
+          toast.success('Email Sent');
+          form.current.reset();
         },
         (error) => {
           console.log(error.text);
@@ -32,6 +36,7 @@ const Contact = () => {
   return (
     <div className="contact-form" id="contact">
       {/* left side copy and paste from work section */}
+      <ToastContainer/>
       <div className="w-left">
         <div className="awesome">
           {/* darkMode */}
@@ -46,8 +51,8 @@ const Contact = () => {
       {/* right side form */}
       <div className="c-right">
         <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name="user_name" className="user"  placeholder="Name"/>
-          <input type="email" name="user_email" className="user" placeholder="Email"/>
+          <input type="text" name="from_name" className="user"  placeholder="Name" required/>
+          <input type="email" name="from_email" className="user" placeholder="Email"  required/>
           <textarea name="message" className="user" placeholder="Message"/>
           <input type="submit" value="Send" className="button"/>
           <span>{done && "Thanks for Contacting me"}</span>

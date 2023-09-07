@@ -28,7 +28,7 @@ const Intro = () => {
         <div className="i-name">
           {/* yahan change hy darkmode ka */}
           <span style={{ color: darkMode ? "white" : "" }}>Hy! I Am</span>
-          <span>Andrew Thomas</span>
+          <span>Muhammad</span>
           <span>
             Frontend Developer with high level of experience in web designing
             and development, producting the Quality work
@@ -39,16 +39,16 @@ const Intro = () => {
         </Link>
         {/* social icons */}
         <div className="i-icons">
-          <img src={Github} alt="" />
-          <img src={LinkedIn} alt="" />
-          <img src={Instagram} alt="" />
+          <a href="https://github.com/Muhammad926"> <img src={Github} alt="" /> </a>
+          <a href="https://www.linkedin.com/in/muhammad-68228a167/"><img src={LinkedIn} alt="" /> </a>
+          <a href="https://www.instagram.com/muhammad_qureshi1130/"><img src={Instagram} alt="" /></a>
         </div>
       </div>
       {/* right image side */}
       <div className="i-right">
         <img src={Vector1} alt="" />
         <img src={Vector2} alt="" />
-        <img src={boy} alt="" />
+        <img src={boy} alt="" style={{width:'400px', height:'350px'}}/>
         {/* animation */}
         <motion.img
           initial={{ left: "-36%" }}

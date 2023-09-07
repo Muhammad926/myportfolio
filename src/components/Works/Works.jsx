@@ -7,7 +7,7 @@ import Shopify from "../../img/Shopify.png";
 import Facebook from "../../img/Facebook.png";
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
-import {Link} from 'react-scroll'
+import { Link } from "react-scroll";
 const Works = () => {
   // context
   const theme = useContext(themeContext);
@@ -21,18 +21,34 @@ const Works = () => {
         <div className="awesome">
           {/* dark Mode */}
           <span style={{ color: darkMode ? "white" : "" }}>
-            Works for All these
+            Services Avalaible on
           </span>
-          <span>Brands & Clients</span>
+          <span>All these brands.</span>
           <spane>
-            Lorem ispum is simpley dummy text of printing of printing Lorem
+            "Crafting effective service descriptions on platforms like Fiverr,
+            Upwork, Amazon, and Shopify is crucial.  
             <br />
-            ispum is simpley dummy text of printingLorem ispum is simpley dummy
-            text
+            On Fiverr, create a catchy
+            title, showcase expertise, emphasize benefits, and outline pricing.
+            <br/>
+            Upwork demands a professional overview, 
+            skills list, work
+            experience, and client testimonials, 
+            <br/>
+            along with availability. Amazon
+            requires keyword-rich titles, bullet-pointed features,
+            <br/>
+             detailed
+            descriptions, high-quality images, and transparent pricing and
+            shipping information.
             <br />
-            y dummy text of printingLorem
+            Shopify calls for engaging product titles,
+            concise yet descriptive product descriptions, high-quality visuals,
+            <br/>
+            customer reviews, and clear pricing and shipping details.
             <br />
-            ispum is simpley dummy text of printing
+            Adhering to these platform-specific guidelines can significantly enhance your
+            chances of attracting clients and customers."
           </spane>
           <Link to="contact" smooth={true} spy={true}>
             <button className="button s-button">Hire Me</button>

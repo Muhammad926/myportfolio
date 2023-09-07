@@ -24,16 +24,16 @@ const Portfolio = () => {
         className="portfolio-slider"
       >
         <SwiperSlide>
-          <img src={Sidebar} alt="" />
+          <a href="https://github.com/Muhammad926"> <img src={Sidebar} alt="" /> </a>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Ecommerce} alt="" />
+        <a href="https://github.com/Muhammad926"> <img src={Ecommerce} alt="" /> </a>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={MusicApp} alt="" />
+        <a href="https://github.com/Muhammad926"> <img src={MusicApp} alt="" /> </a>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={HOC} alt="" />
+        <a href="https://github.com/Muhammad926"> <img src={HOC} alt="" /> </a>
         </SwiperSlide>
       </Swiper>
     </div>
